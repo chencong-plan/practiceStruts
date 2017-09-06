@@ -1,0 +1,21 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="practiceStruts:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/practiceStruts_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="practiceStruts/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="practiceStruts" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Struts 2-2.3.20.1" />
+          <element id="library" level="project" name="mysql-connector-java-5.1.43-bin" />
+          <element id="file-copy" path="G:/mylib/jstl/jstl.jar" />
+          <element id="file-copy" path="G:/mylib/jstl/standard.jar" />
+          <element id="file-copy" path="G:/mylib/fastjson/fastjson-1.2.37.jar" />
+          <element id="file-copy" path="G:/mylib/structs/struts2-json-plugin-2.3.16.1.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

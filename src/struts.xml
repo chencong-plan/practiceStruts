@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="userAction" namespace="/" extends="json-default">
+
+      <!--  <action name="RegisterAction" class="cc.ccoder.controler.UserAction" method="userRegister">
+            <result name="userRegister" type="dispatcher">/login.jsp</result>
+            <result name = "register_fail" type="dispatcher">/register.jsp</result>
+        </action>-->
+        <action name="userRegisterAction" class="cc.ccoder.controler.UserAction" method="userRegister">
+            <result type="json">
+                <param name="root">userList</param>
+            </result>
+        </action>
+
+        <action name="LoginAction" class="cc.ccoder.controler.UserAction" method="userLogin" >
+            <result name="login_fail">/login.jsp</result>
+            <result name="userLogin" type="redirectAction">userListsAction</result>
+        </action>
+
+        <action name="userListsAction" class="cc.ccoder.controler.UserAction" method="getUsersLists">
+            <result name="getLists_fail" type="redirect">/login.jsp</result>
+            <result name="getUsersLists">/userLists.jsp</result>
+        </action>
+        <action name="checkUserAction" class="cc.ccoder.controler.UserAction" method="checkUser">
+            <result type="json">
+                <param name="root">msg</param>
+            </result>
+        </action>
+
+        <action name="deleteUserAction" class="cc.ccoder.controler.UserAction" method="deleteUser">
+            <result name="success" type="json">
+                <param name="root">msg</param>
+            </result>
+        </action>
+
+    </package>
+</struts>
